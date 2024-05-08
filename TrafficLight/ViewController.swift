@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var redLightView: UIView!
     @IBOutlet var yellowLightView: UIView!
     @IBOutlet var greenLightView: UIView!
+    @IBOutlet var startButton: UIButton!
     
     private let switchOn: CGFloat = 1
     private let switchOff: CGFloat = 0.3
@@ -23,22 +24,23 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        startButton.layer.cornerRadius = 10
       
         redLightView.alpha = switchOff
-        redLightView.layer.cornerRadius = 50
+        redLightView.layer.cornerRadius = redLightView.frame.height / 2
        
         yellowLightView.alpha = switchOff
-        yellowLightView.layer.cornerRadius = 50
+        yellowLightView.layer.cornerRadius = yellowLightView.frame.height / 2
         
         greenLightView.alpha = switchOff
-        greenLightView.layer.cornerRadius = 50
+        greenLightView.layer.cornerRadius = greenLightView.frame.height / 2
     }
 
     
     
-    @IBAction func lightSwitchButtonDidTap(_ sender: UIButton) {
-        
-        sender.setTitle("NEXT", for: .normal)
+    @IBAction func lightSwitchButtonDidTap() {
+        startButton.setTitle("NEXT", for: .normal)
         
         if redLight {
             redLightView.alpha = switchOn
