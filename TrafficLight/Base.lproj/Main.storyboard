@@ -4,6 +4,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22684"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -46,13 +47,15 @@
                                 <variation key="heightClass=compact-widthClass=regular" axis="horizontal"/>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="G5Y-Af-Lg5">
-                                <rect key="frame" x="81.333333333333329" y="586.33333333333337" width="230.33333333333337" height="38"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="START">
-                                    <fontDescription key="titleFontDescription" style="UICTFontTextStyleTitle3"/>
-                                </buttonConfiguration>
+                                <rect key="frame" x="81.333333333333329" y="586.33333333333337" width="230.33333333333337" height="36"/>
+                                <color key="backgroundColor" name="AccentColor"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle3"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="START">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
-                                    <action selector="lightSwitchButtonDidTap:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jgI-wC-sLq"/>
+                                    <action selector="lightSwitchButtonDidTap" destination="BYZ-38-t0r" eventType="touchUpInside" id="c8C-sc-v8s"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -70,6 +73,7 @@
                     <connections>
                         <outlet property="greenLightView" destination="esa-2Z-f1I" id="53o-7M-Msf"/>
                         <outlet property="redLightView" destination="VHU-R7-SqS" id="WbM-i0-Ywa"/>
+                        <outlet property="startButton" destination="G5Y-Af-Lg5" id="5oh-QF-29i"/>
                         <outlet property="yellowLightView" destination="9cI-8U-mMg" id="N0h-GR-nN6"/>
                     </connections>
                 </viewController>
@@ -79,6 +83,9 @@
         </scene>
     </scenes>
     <resources>
+        <namedColor name="AccentColor">
+            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
